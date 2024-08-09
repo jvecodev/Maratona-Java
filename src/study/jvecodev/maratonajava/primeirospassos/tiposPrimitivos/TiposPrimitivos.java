@@ -1,4 +1,4 @@
-package study.jvecodev.maratonajava.primeirospassos;
+package study.jvecodev.maratonajava.primeirospassos.tiposPrimitivos;
 
 /**
  Int, double, float, char, byte, long, boolean
@@ -6,8 +6,9 @@ package study.jvecodev.maratonajava.primeirospassos;
 public class TiposPrimitivos {
     public static void main(String[] args) {
       int idade = 10; //4 byte
-      long vizualizacoesMensaisGoogle = 1000000000; //8 byte
-      float salario = 3300.50f; //4 byte
+      long vizualizacoesMensaisGoogle = 1000000000L; //8 byte 'l' Might big case
+//    long vizualizacoesMensaisGoogle = (int)1000000000L; //Aqui eu estou forcando que para que ele se torne um INT, neste caso eu ignoro o tipo LONG, não é uma prática boa
+      float salario = 3300.50F; //4 byte, 'f'Might be BigCase LETTER
       double valuationApple = 320000000; //8 byte
       short idadeMenor = 18; // 2 byte
       boolean verdadeiro = true; //1bit
@@ -20,4 +21,6 @@ public class TiposPrimitivos {
                 " / Salario:"+ salario+ " / Idade/ Short:" + idadeMenor );
 
     }
+
+
 }

@@ -1,4 +1,4 @@
-package study.jvecodev.maratonajava.primeirospassos.Aula01Carros;
+package study.jvecodev.maratonajava.primeirospassos.Aula02CarrosPOO;
 
 public class Carro {
     String marca;

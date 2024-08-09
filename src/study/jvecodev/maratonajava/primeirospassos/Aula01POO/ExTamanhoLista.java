@@ -1,4 +1,4 @@
-package study.jvecodev.maratonajava.primeirospassos;
+package study.jvecodev.maratonajava.primeirospassos.Aula01POO;
 
 import java.util.Random;
 import java.util.Scanner;

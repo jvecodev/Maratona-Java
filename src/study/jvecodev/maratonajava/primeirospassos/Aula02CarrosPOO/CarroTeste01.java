@@ -1,4 +1,4 @@
-package study.jvecodev.maratonajava.primeirospassos.Aula01Carros;
+package study.jvecodev.maratonajava.primeirospassos.Aula02CarrosPOO;
 
 import java.util.Scanner;
 
