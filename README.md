@@ -1,4 +1,4 @@
-# 📚 Estudos em Java
+<h1> JAVA   <img src="https://skillicons.dev/icons?i=java" /> </h1>
 
 Este repositório contém exercícios, projetos e anotações dos meus estudos em Java. Meu objetivo é consolidar conhecimentos, praticar a linguagem e compartilhar minha evolução.
 
