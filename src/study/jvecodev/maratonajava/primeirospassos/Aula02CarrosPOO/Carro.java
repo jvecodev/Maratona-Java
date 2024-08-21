@@ -1,11 +1,11 @@
 package study.jvecodev.maratonajava.primeirospassos.Aula02CarrosPOO;
 
 public class Carro {
-    String marca;
-    String modelo;
-    int ano;
-    String cor;
-    String chassi;
+    private String marca;
+    private String modelo;
+    private int ano;
+    private String cor;
+    private String chassi;
 
     @Override
     public String toString() {
@@ -20,6 +20,8 @@ public class Carro {
 
     // Construtor
     public Carro(String marca, String modelo, int ano, String cor, String chassi) {
+        //this usada quando nos referimos ao atributo
+
         this.marca = marca;
         this.modelo = modelo;
         this.ano = ano;
