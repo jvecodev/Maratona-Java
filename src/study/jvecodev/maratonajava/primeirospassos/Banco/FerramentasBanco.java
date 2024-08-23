@@ -3,8 +3,10 @@ package study.jvecodev.maratonajava.primeirospassos.Banco;
 public class FerramentasBanco {
     private double saldo;
 
+
     public FerramentasBanco(double saldoInicial) {
         this.saldo = saldoInicial;
+
     }
 
     // Método para verificar o saldo
