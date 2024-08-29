@@ -1,4 +1,4 @@
-package study.jvecodev.maratonajava.primeirospassos.tiposPrimitivos;
+package study.jvecodev.maratonajava.primeirospassos.operadores.tiposPrimitivos;
 
 /**
  Int, double, float, char, byte, long, boolean

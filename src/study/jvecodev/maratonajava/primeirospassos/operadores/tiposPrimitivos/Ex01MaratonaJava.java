@@ -1,4 +1,4 @@
-package study.jvecodev.maratonajava.primeirospassos.tiposPrimitivos;
+package study.jvecodev.maratonajava.primeirospassos.operadores.tiposPrimitivos;
 import java.util.Scanner;
 public class Ex01MaratonaJava {
     public static void main(String[] args) {
