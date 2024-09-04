@@ -17,6 +17,7 @@ public class Aula02Arrays {
 
         //Outra forma de inicialização
 
+
         int [] numeros1 = {1,2,3,4,5};
         //                 aqui ja são os valores e automaticamente já é calculado o tamanho do array
 
