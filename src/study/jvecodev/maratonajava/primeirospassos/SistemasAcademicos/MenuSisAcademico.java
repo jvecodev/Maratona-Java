@@ -46,7 +46,6 @@ public class MenuSisAcademico {
             String opcao = scanner.nextLine().trim();
 
             System.out.println("=================================================");
-
             switch (opcao) {
                 case "1":
                     matricularAluno();
