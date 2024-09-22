@@ -3,12 +3,10 @@ package study.jvecodev.maratonajava.polimorfismo;
 import java.time.LocalDate;
 import java.util.Scanner;
 
-// Classe CartaoCredito
 public class CartaoCredito extends Pagamento {
     private String numeroCartao;
     private String nomeTitular;
     private String cvv;
-
     private static final Scanner scanner = new Scanner(System.in);
 
     public CartaoCredito(double valor, LocalDate data, int metodoPagamento, String numeroCartao, String nomeTitular, String cvv) {
@@ -18,6 +16,9 @@ public class CartaoCredito extends Pagamento {
         this.cvv = cvv;
     }
 
+
+
+
     public String getNumeroCartao() {
         return numeroCartao;
     }
@@ -26,16 +27,16 @@ public class CartaoCredito extends Pagamento {
         return nomeTitular;
     }
 
-    public String getCvv() {
-        return cvv;
+    public void setNomeTitular(String nomeTitular) {
+        this.nomeTitular = nomeTitular;
     }
 
     public void setNumeroCartao(String numeroCartao) {
         this.numeroCartao = numeroCartao;
     }
 
-    public void setNomeTitular(String nomeTitular) {
-        this.nomeTitular = nomeTitular;
+    public String getCvv() {
+        return cvv;
     }
 
     public void setCvv(String cvv) {
@@ -47,11 +48,11 @@ public class CartaoCredito extends Pagamento {
         System.out.print("Digite o Valor do Pagamento: ");
         Double valor = scanner.nextDouble();
         setValor(valor);
-        scanner.nextLine(); // Limpa o buffer
+        scanner.nextLine();
 
         System.out.print("Digite o número do cartão: ");
-         numeroCartao= scanner.nextLine();
-        setNumeroCartao(numeroCartao);
+        numeroCartao = scanner.nextLine();
+
 
         System.out.print("Digite o nome do titular: ");
         nomeTitular = scanner.nextLine();
@@ -59,30 +60,50 @@ public class CartaoCredito extends Pagamento {
 
         System.out.print("Digite o CVV: ");
         cvv = scanner.nextLine();
-        setCvv(cvv);
 
 
         setData(LocalDate.now());
 
+
+        String numeroCartaoOculto = ocultarNumeroCartao(numeroCartao);
+        String cvvOculto = ocultarCvv(cvv);
+
+        setNumeroCartao(numeroCartaoOculto);
+        setCvv(cvvOculto);
+
+        System.out.println("==========================================");
+
+
+
+    }
+
+
+    private String ocultarNumeroCartao(String numeroCartao) {
+        if (numeroCartao.length() <= 4) {
+            return numeroCartao;
+        }
         int numDigitosVisiveis = 4;
-        String senhaOcultada = "*".repeat(numeroCartao.length() - numDigitosVisiveis)
+        return "*".repeat(numeroCartao.length() - numDigitosVisiveis)
                 + numeroCartao.substring(numeroCartao.length() - numDigitosVisiveis);
-
-        setNumeroCartao(senhaOcultada);
-
-        int numeroVisiveis = 2;
-        String cvvMisterioso = "*".repeat(cvv.length() - numeroVisiveis) +
-                cvv.substring(cvv.length() - numeroVisiveis);
-
-        setCvv(cvvMisterioso);
+    }
 
 
+    private String ocultarCvv(String cvv) {
+        if (cvv.length() <= 2) {
+            return cvv;
+        }
+        int numDigitosVisiveis = 2;
+        return "*".repeat(cvv.length() - numDigitosVisiveis)
+                + cvv.substring(cvv.length() - numDigitosVisiveis);
+    }
 
-        System.out.println("Processando pagamento via Pix de R$ "  + getValor() +
-                "\n Nome do Titular: " + getNomeTitular() +
+    public void exibirDetalhes() {
+
+        System.out.println( "Processando pagamento via Cartão de Crédito de R$ " + getValor()
+                + "\n Nome do titular do cartão: " + nomeTitular +
                 "\n Data do pagamento: " + getData() +
                 "\n Número do cartão: " +  getNumeroCartao() +
                 "\n Código de segurança: " + getCvv());
-
+        System.out.println("===================================================");
     }
 }

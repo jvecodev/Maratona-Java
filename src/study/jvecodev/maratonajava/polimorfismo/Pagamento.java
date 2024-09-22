@@ -2,20 +2,23 @@ package study.jvecodev.maratonajava.polimorfismo;
 
 import java.time.LocalDate;
 
-// Classe base Pagamento
 public class Pagamento {
     private double valor;
     private LocalDate data;
     private int metodoPagamento;
 
+    // Construtor sem parâmetros
+    public Pagamento() {
+    }
 
-
+    // Construtor com parâmetros
     public Pagamento(double valor, LocalDate data, int metodoPagamento) {
         this.valor = valor;
         this.data = data;
         this.metodoPagamento = metodoPagamento;
     }
 
+    // Getters e Setters
     public double getValor() {
         return valor;
     }
@@ -40,8 +43,13 @@ public class Pagamento {
         this.metodoPagamento = metodoPagamento;
     }
 
+    // Método não sobrescrito
+    public void exibirRecibo() {
+        System.out.println("Exibindo recibo do pagamento de R$ " + valor + " na data " + data);
+    }
 
-
-    // Método processarPagamento a ser sobrescrito
-    public void processarPagamento(){};
+    // Método a ser sobrescrito
+    public void processarPagamento() {
+        System.out.println("Processando pagamento genérico.");
+    }
 }
